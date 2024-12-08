@@ -2,7 +2,15 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        offWhite: "#DADADA",
+        daylightBlue: "#374CBE",
+      },
+      fontFamily: {
+        Inter: "Inter",
+      },
+    },
   },
   plugins: [],
 };
