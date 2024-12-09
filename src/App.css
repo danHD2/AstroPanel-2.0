@@ -2,3 +2,21 @@ body {
   background-color: #000000;
   font-family: "Inter", sans-serif;
 }
+
+#root {
+  height: 100vh;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}

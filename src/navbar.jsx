@@ -6,16 +6,55 @@ import iss from "./assets/iss.svg";
 import calendar from "./assets/calendar.svg";
 import settings from "./assets/settings.svg";
 import refresh from "./assets/refresh.svg";
+import alertIcon from "./assets/location-alert.svg";
+import { useState } from "react";
 
 function Navbar() {
+  const [alert, setAlert] = useState(true);
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
+  let title = "";
+  switch (location.pathname) {
+    case "/overview":
+      title = "Overview";
+      break;
+    case "/detail":
+      title = "Detail View";
+      break;
+    case "/darkness":
+      title = "Darkness";
+      break;
+    case "/iss":
+      title = "ISS Visible Passes";
+      break;
+    case "/calendar":
+      title = "Lunar Calendar";
+      break;
+    case "/settings":
+      title = "Settings";
+      break;
+    default:
+      title = "Overview";
+  }
 
   return (
     <div className="h-[50px] w-screen flex flex-row justify-between items-center">
       <div className="text-offWhite ml-[8px]">
-        <h1 className="text-sm font-bold">Overview</h1>
+        {alert ? "" : <h1 className="text-sm font-bold">{title}</h1>}
         <p className="text-xs">Location: Home (45.234442, 25.231442)</p>
+        {alert ? (
+          <div
+            className="flex flex-row cursor-pointer"
+            onClick={() => setAlert(false)}
+          >
+            <img src={alertIcon} alt="Set Location" />
+            <p className="text-xs pl-1 text-sunOrange">
+              Press to update location with current position
+            </p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <div className="flex flex-row mr-[15px]">
         <Link

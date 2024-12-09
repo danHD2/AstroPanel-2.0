@@ -6,6 +6,7 @@ export default {
       colors: {
         offWhite: "#DADADA",
         daylightBlue: "#374CBE",
+        sunOrange: "#E07F0D",
       },
       fontFamily: {
         Inter: "Inter",
