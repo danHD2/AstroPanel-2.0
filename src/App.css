@@ -9,6 +9,7 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 12px;
+  height: 2px;
 }
 
 /* Track */

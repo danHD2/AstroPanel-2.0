@@ -7,6 +7,7 @@ export default {
         offWhite: "#DADADA",
         daylightBlue: "#374CBE",
         sunOrange: "#E07F0D",
+        midnight: "#161616",
       },
       fontFamily: {
         Inter: "Inter",
