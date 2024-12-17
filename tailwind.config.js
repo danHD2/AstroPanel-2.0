@@ -12,6 +12,9 @@ export default {
       fontFamily: {
         Inter: "Inter",
       },
+      backgroundImage: {
+        darknessGraph: "url('/src/assets/darknessGraph.svg')",
+      },
     },
   },
   plugins: [],
